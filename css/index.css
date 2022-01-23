@@ -1,0 +1,29 @@
+* {
+    margin: 0 auto;
+    border: 0 auto;
+    padding: 0 auto;
+    }
+
+body{
+    
+}
+
+
+
+.geral {
+    overflow: hidden;
+    position: relative;
+}
+    
+.backGround {
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+    
+.inferior {
+    position: relative;
+}
