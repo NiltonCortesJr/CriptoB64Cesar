@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Codificador e Decodificador</title>
+        <title>Codificador / Decodificador</title>
         
         <link rel="stylesheet" type="text/css" href="./css/index.css">
 
@@ -14,39 +14,73 @@
     <body>
 
         <div class="geral">
-
+            
             <header>
-                <div class="header">
-                    <h1>Criptografia</h1>
-
-                    <h2>" É a conversão de texto simples legível em texto incompreensível ("embaralhado"), também é usada para proteger senhas."</h2>
-                    
-                    <h3></h3>
-                </div>
+                
+                <h1>Criptografia</h1> <br>
+                <h2>" É a conversão de texto simples legível em texto incompreensível ("embaralhado"), também é usada para proteger senhas, mensagens ou dados para que não sejam identificados se interceptados forem."</h2>
+                
             </header>
-
+            
             <main>
                 
-                <div class="centro">
-                    <img id="backGround" src="./img/matrix.gif" alt="Imagem de fundo matrix.gif"> 
+                <div class="escolha">
 
-                
-                    <div class="inferior">
-                    <h4>Hello World!</h1>
+                    <div class="frase">
+                        <h3>Insira uma frase para ser codificada ou descodificada: </h3> <br>
+                        <input type="text" mame="frase" id="entrada" placeholder="Insira sua frase aqui">
                     </div>
-                </div>
 
+                    
+                    <div id="codDecod">
+                        <h3>Escolha a ação: Codificar ou Decodificar</h3>
+                        <br> <input id="codifica" type="radio" name="selecao" checked>
+                        <label for="codifica">Codificar</label>
 
+                        <br> <input id="decodifica" type="radio" name="selecao">
+                        <label for="decodifica">Decodificar</label>
+                    </div>
+                    
+                    <div class="metodo">
+                        <br> <h3>Qual método você quer:</h3> <br>
+
+                        <select id="metodoEscolhido">
+                           <option disabled selected>Selecione abaixo o método:</option> 
+                           <option value="1">Cifra de Cesar </option>
+                           <option valeu="2">Base 64 </option>
+                        </select>
+                    
+                        <div id="casoCesar">
+                            <br> <label for="selecaoDeCasas">Qual avanço você quer? </label>
+                            <input type="number" id="avanco" min="1" max="25" placeholder="0">
+                        </div>
+
+                        <div id="botao">
+                            <br> <button id="rodaBotao" type="submit">Codificar/Decodificar</button>
+                        </div>    
+
+                        <div class="retornoMensagem">
+                            <br> <h3>Mensagem Codificada / Decodificada:</h3> <br>
+                            <input value="" class="digitavel" id="digitavel"type="text">
+                        </div>
+
+                    </div>
+                        
+                    <!-- <img id="backGround" src="./img/matrix.gif" alt="Imagem de fundo matrix.gif">  -->
 
             </main>
 
-
-
-
             
-            <!-- <script src="./js/index.js"></script> -->
-        </body>
+ 
+            <script src="./js/index.js"></script>
+        </div>
 
-    </div>
+        <footer>
+                &copy; Copyright 2022 - NiltonJr. Para fins educacionais. Estudante Desenvolvedor Web Full Stack.
+        </footer>
+
+    </body>
+
+    
 
 </html>

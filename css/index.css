@@ -4,26 +4,91 @@
     padding: 0 auto;
     }
 
+    html{
+    height: 100%;
+}
+
+/* Apliacando o gif como background */
 body{
-    
+    width: 95%;
+    height: 100%;
+    background-attachment: fixed;
+    background-image: url(../img/matrix.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+    text-align: center;  
+}
+
+/* Estilizando o header */
+header{
+    padding: 10px 5px 15px 5px;
+    border: 3px solid rgb(145, 241, 132);
+    border-radius: 0.5em;
+    padding-top: 1em;
+    color: whitesmoke;
+}
+
+/* Estilizando os h's */
+h1{
+    color: whitesmoke;
+}
+
+h2{
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+h3{
+    color: whitesmoke;
+}
+
+/* Estilizando as div's */
+.geral{
+
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+.frase{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 3px solid rgb(145, 241, 132);
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-content: center;
+}
+
+/* Estilizando o campo da frase a ser digitada */
+#entrada{
+    width: 45em;
+    height: 2em;
+}
+
+.codDecod{
+    border: 3px solid rgb(145, 241, 132);
+    border-radius: 0.5em;
+
+}
+
+/* Estilizando o footer */    
+footer{
+    border: 3px solid rgb(145, 241, 132);
+    border-radius: 0.5em;
+    text-align: center;
+    color: whitesmoke;
 }
 
 
 
-.geral {
-    overflow: hidden;
-    position: relative;
-}
-    
-.backGround {
-    opacity: 0.6;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-}
-    
-.inferior {
-    position: relative;
+
+/* Implementando o responsivo */
+
+@media (max-width: 600px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
 }
