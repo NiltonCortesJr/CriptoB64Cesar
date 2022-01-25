@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Codificador / Decodificador</title>
-        
+
         <link rel="stylesheet" type="text/css" href="./css/index.css">
 
     </head>
@@ -17,8 +17,9 @@
             
             <header>
                 
-                <h1>Criptografia</h1> <br>
-                <h2>" É a conversão de texto simples legível em texto incompreensível ("embaralhado"), também é usada para proteger senhas, mensagens ou dados para que não sejam identificados se interceptados forem."</h2>
+                <h1>🔐 Criptografia 🔐</h1> <br>
+                <h2>" É a conversão de texto simples legível em texto incompreensível ("embaralhado"),<br> 
+                    também é usada para proteger senhas 📲, mensagens 📧 ou dados 💻, para que não sejam identificados se interceptados forem." </h2>
                 
             </header>
             
@@ -26,42 +27,57 @@
                 
                 <div class="escolha">
 
-                    <div class="frase">
+                    <div class="frase" title="Digite sua frase">
                         <h3>Insira uma frase para ser codificada ou descodificada: </h3> <br>
-                        <input type="text" mame="frase" id="entrada" placeholder="Insira sua frase aqui">
+                        <textarea name="frase digitada" id="entrada" cols="60" rows="3" placeholder="📲  Insira sua frase aqui: 💻"  ></textarea>
+                        
                     </div>
 
                     
-                    <div id="codDecod">
+                    <div class="codDecod">
                         <h3>Escolha a ação: Codificar ou Decodificar</h3>
-                        <br> <input id="codifica" type="radio" name="selecao" checked>
-                        <label for="codifica">Codificar</label>
+                        <br> <input id="codifica" type="radio" name="selecao" checked title="Selecione aqui!">
+                        <label for="codifica" title="Selecione ao lado"> 👈 - C o d i f i c a r 🔏</label> <br>
 
-                        <br> <input id="decodifica" type="radio" name="selecao">
-                        <label for="decodifica">Decodificar</label>
+                        <br> <input id="decodifica" type="radio" name="selecao" title="Selecione aqui!">
+                        <label for="decodifica" title="Selecione ao lado"> 👈 - D e c o d i f i c a r 🔎 </label>
                     </div>
                     
                     <div class="metodo">
-                        <br> <h3>Qual método você quer:</h3> <br>
+                        <h3>Qual método você quer: Cifra de Cesar ou Base 64?</h3> <br> 
+                        
+                        <div class="figuras">
+                            <img id="figura" src="./img/cifraDeCesar.jpg" alt="imagem Cesar Menoti e Fabiano"> 
+                            
+                            <select id="metodoEscolhido" title="Clique na seta!">
+                            <option disabled selected >Selecione o método aqui:</option> 
+                            <option value="1">Cifra de Cesar </option>
+                            <option valeu="2">Base 64 </option>
+                            </select>
+                            
+                            <img id="figura" src="./img/base64.png" alt="imagem super base 64">
+                        </div>
 
-                        <select id="metodoEscolhido">
-                           <option disabled selected>Selecione abaixo o método:</option> 
-                           <option value="1">Cifra de Cesar </option>
-                           <option valeu="2">Base 64 </option>
-                        </select>
-                    
                         <div id="casoCesar">
-                            <br> <label for="selecaoDeCasas">Qual avanço você quer? </label>
-                            <input type="number" id="avanco" min="1" max="25" placeholder="0">
+                            <br> <label for="selecaoDeCasas">Qual avanço você quer? </label> <br>
+                            <!-- <input type="number" id="avanco" min="1" max="25" placeholder="0"> -->
+                            <!-- tentando pegar o rango -->
+                            
+                            <div class="rango">
+                                <br> <input id="rango" type="range" value="10" min="1" max="20" oninput="this.nextElementSibling.value = this.value" title="Mova para escolher o avanço!">
+                                <output>10</output>
+                            </div>
+                            
                         </div>
 
                         <div id="botao">
-                            <br> <button id="rodaBotao" type="submit">Codificar/Decodificar</button>
+                            <br> <button id="rodaBotao" type="submit" title="Clique!!">Codificar / Decodificar</button>
+                            
                         </div>    
 
                         <div class="retornoMensagem">
-                            <br> <h3>Mensagem Codificada / Decodificada:</h3> <br>
-                            <input value="" class="digitavel" id="digitavel"type="text">
+                            <br> <h3>🔓 Mensagem Codificada / Decodificada: 🔓</h3> <br>
+                            <textarea name="fraseCodificada" id="saida" cols="60" rows="3" placeholder="A mensagem codificada / descodificada aparecerá aqui" title="Não digite aqui!"></textarea>
                         </div>
 
                     </div>

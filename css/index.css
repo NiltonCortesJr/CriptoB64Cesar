@@ -4,56 +4,63 @@
     padding: 0 auto;
     }
 
-    html{
-    height: 100%;
-}
 
 /* Apliacando o gif como background */
 body{
     width: 95%;
-    height: 100%;
+    height: 100vh;
     background-attachment: fixed;
     background-image: url(../img/matrix.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: sans-serif;
+    
     text-align: center;  
 }
 
 /* Estilizando o header */
 header{
+    margin-top: 15px;
     padding: 10px 5px 15px 5px;
-    border: 3px solid rgb(145, 241, 132);
+    border: 3px solid rgb(40, 156, 127);
     border-radius: 0.5em;
     padding-top: 1em;
     color: whitesmoke;
 }
 
-/* Estilizando os h's */
+/* Estilizando os h1's */
 h1{
+    background-color: rgba(26, 116, 14, 0.562);
+    width: 15em;
+    border: 2px solid rgb(145, 241, 132);
+    border-radius: 0.5em;
     color: whitesmoke;
 }
-
+/* Estilizando os h1's */
 h2{
-    font-size: 15px;
+    font-size: 20px;
     color: whitesmoke;
 }
-
+/* Estilizando os h1's */
 h3{
+    background-color: rgba(26, 116, 14, 0.562);
+    width: 35em;
+    border: 2px solid rgb(145, 241, 132);
+    border-radius: 0.5em;
     color: whitesmoke;
 }
 
 /* Estilizando as div's */
 .geral{
 
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: rgba(0, 0, 0, 0.726);
 }
 
+/* Estilizando o campo da frase a ser digitada */
 .frase{
     margin-top: 1em;
     margin-bottom: 1em;
-    border: 3px solid rgb(145, 241, 132);
+    border: 3px solid rgb(40, 156, 127);
     border-radius: 0.5em;
     display: flex;
     flex-direction: column;
@@ -61,34 +68,158 @@ h3{
     align-content: center;
 }
 
-/* Estilizando o campo da frase a ser digitada */
+/* Estilizando a caixa de mensagem de entrada */  
 #entrada{
-    width: 45em;
-    height: 2em;
+    border-radius: 5px;
+    border: 3px solid rgb(52, 128, 199);
 }
 
+/* Estilizando o campo da frase a ser digitada */
 .codDecod{
-    border: 3px solid rgb(145, 241, 132);
+    padding: 10px 5px 15px 5px;
+    border: 3px solid rgb(40, 156, 127);
     border-radius: 0.5em;
+}
 
+/* Estilizando a cor do label dos radios buttoms */ 
+label{
+    font: bold;
+    font-size: 1.2em;
+    color: whitesmoke;
+}
+
+/* Estilizando a div método */ 
+.metodo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 10px 5px 15px 5px;
+    border: 3px solid rgb(40, 156, 127);
+    border-radius: 0.5em;
+}
+
+/* Estilizando a div figuras */ 
+.figuras{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    align-content: space-between;
+}
+
+/* Estilizando as figuras */ 
+#figura{
+    width: 220px;
+    height: 200px;
+    border-radius: 60px;
+
+}
+/* Estilizando o id metodoEscolhido */ 
+#metodoEscolhido{
+    border-radius: 5px;
+    width: 15em;
+    height: 3em;
+    margin-left: 1em;
+    border: 3px solid rgb(52, 128, 199);
+}
+
+/* Estilizando a barra progressiva */ 
+output{
+    color: whitesmoke;
+}
+
+/* Estilizando o botão */ 
+#rodaBotao{
+    background-color: rgba(128, 128, 128, 0.849);
+    border: 3px solid rgb(52, 128, 199);
+    border-radius: 5px;
+    width: 15em;
+    height: 3em;
+    color: whitesmoke;
+}
+
+/* Estilizando o hover no botão */ 
+#rodaBotao:hover{
+    transition: 0.5s;
+    color: rgb(184, 235, 177);
+    font-size: 1em;
+    text-shadow:  0.5px 0.5px 0.5px black;
+    font-weight: bold;
+    
+}
+/* Estilizando a classe retornoMensagem */ 
+.retornoMensagem{
+    margin-top: 25px;
+}
+
+/* Estilizando a caixa de mensagem de saída */ 
+#saida{
+    border-radius: 5px;
 }
 
 /* Estilizando o footer */    
 footer{
-    border: 3px solid rgb(145, 241, 132);
+    margin-top: 1em;
+    border: 3px solid rgb(40, 156, 127);
     border-radius: 0.5em;
     text-align: center;
     color: whitesmoke;
 }
 
-
-
-
-/* Implementando o responsivo */
+/* Implementando o responsivo com tela de 599 a 400px */
 
 @media (max-width: 600px) {
     body{
+        width: 95%;
+    }
+
+    header{
+        width: auto;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    h2, h3{
+        font-size: 15px;
+        width: auto;
+    }
+
+    #entrada{
+        width: 25em;
+    }
+
+    .figuras{
         display: flex;
         flex-direction: column;
+        align-content: center;
+        align-items: center;
+        align-content: space-between;
+        
     }
+    
+    #figura{
+        width: 120px;
+        height: 120px; 
+    }
+
+
+    footer{
+        font-size: 12px;
+    }
+
+}
+
+/* Implementando o responsivo com tela abaixo de 399 px */
+@media (max-width: 400px) {
+
+    h1, h2, h3{
+        width: auto;
+    }
+
+    #entrada, #saida{
+        width: 15em;
+    }
+    
 }
