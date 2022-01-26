@@ -44,12 +44,12 @@
 
    if(metodo.value == 1){
       if(codifica.checked ){
-         mensagemRetornada = cifraDeCesar(fraseDigitada.value, metodoCesar.value)
-         resultado.setAttribute("value",mensagemRetornada)
+         mensagemRetornada = cifraDeCesar(fraseDigitada.value, metodoCesar.value);
+         resultado.setAttribute("value",mensagemRetornada);
       }
       else{
-         mensagemRetornada = decodicaCesar(fraseDigitada.value, metodoCesar.value)
-         resultado.setAttribute("value",mensagemRetornada)
+         mensagemRetornada = decodicaCesar(fraseDigitada.value, metodoCesar.value);
+         resultado.setAttribute("value",mensagemRetornada);
       }
    }   
    
@@ -58,27 +58,27 @@
 
    function cifraDeCesar (texto, adiciona){
 
-      var adiciona = parseInt(adiciona)
-      var armazenaMensagem = texto.toLowerCase()
-      armazenaMensagem = armazenaMensagem.split("")
-      var mensagemCriptografada = []
-      var cesar = []
+      var adiciona = parseInt(adiciona);
+      var armazenaMensagem = texto.toLowerCase();
+      armazenaMensagem = armazenaMensagem.split("");
+      var mensagemCriptografada = [];
+      var cesar = [];
 
       //Percorrendo o tamanho da mensagem
 
       for (var i=0; i<armazenaMensagem.length; i++){
-         var msg = armazenaMensagem[i].charCodeAt()
+         var msg = armazenaMensagem[i].charCodeAt();
          if (msg != 32){ 
-            mensagemCriptografada.push(((msg - 97 + adiciona) % 26) + 97)
+            mensagemCriptografada.push(((msg - 97 + adiciona) % 26) + 97);
          }
          else {
-            mensagemCriptografada.push(msg)
+            mensagemCriptografada.push(msg);
          }
       }
       for (var j=0; j<mensagemCriptografada.length; j++){
-         cesar.push(String.fromCharCode(mensagemCriptografada[j]))
+         cesar.push(String.fromCharCode(mensagemCriptografada[j]));
       }
-      return cesar.join("")
+      return cesar.join("");
    }
 
 
@@ -86,32 +86,32 @@
 
    function decodicaCesar (texto, adiciona){
 
-      var adiciona = parseInt(adiciona)
-      var armazenaMensagem = texto.split("")
-      armazenaMensagem = armazenaMensagem.toLowerCase()
-      var mensagemCriptografada = []
-      var cesar = []
+      var adiciona = parseInt(adiciona);
+      var armazenaMensagem = texto.split("");
+      armazenaMensagem = armazenaMensagem.toLowerCase();
+      var mensagemCriptografada = [];
+      var cesar = [];
 
       //Percorrendo o tamanho da mensagem
 
       for (var i=0; i<armazenaMensagem.length; i++){
-         var msg = armazenaMensagem[i].charCodeAt()
+         var msg = armazenaMensagem[i].charCodeAt();
          if (msg != 32){
             if ((msg - 97 + adiciona) >=0 ){
-               mensagemCriptografada.push(((msg - 97 - adiciona) % 26) + 97)
+               mensagemCriptografada.push(((msg - 97 - adiciona) % 26) + 97);
             }
             else{
-               mensagemCriptografada.push(((msg - 97 - adiciona) + 26) + 97)
+               mensagemCriptografada.push(((msg - 97 - adiciona) + 26) + 97);
             }
          }
          else {
-            mensagemCriptografada.push(msg)
+            mensagemCriptografada.push(msg);
          }
       }
       for (var j=0; j<mensagemCriptografada.length; j++){
-         cesar.push(String.fromCharCode(mensagemCriptografada[j]))
+         cesar.push(String.fromCharCode(mensagemCriptografada[j]));
       }
-      return cesar.join("")
+      return cesar.join("");
    }
    
 // Validando checkbox para Codificar / Decodificar
@@ -122,15 +122,15 @@
 
    if(metodo.value == 1){
       if(codifica.checked ){
-         mensagemRetornada = cifraDeCesar(fraseDigitada.value, metodoCesar.value)
-         resultado.setAttribute("value",mensagemRetornada)
+         mensagemRetornada = cifraDeCesar(fraseDigitada.value, metodoCesar.value);
+         resultado.setAttribute("value",mensagemRetornada);
       }
       
       // Decodificando
 
       else{
-         mensagemRetornada = decodicaCesar(fraseDigitada.value, metodoCesar.value)
-         resultado.setAttribute("value",mensagemRetornada)
+         mensagemRetornada = decodicaCesar(fraseDigitada.value, metodoCesar.value);
+         resultado.setAttribute("value",mensagemRetornada);
       }
    }
 
@@ -142,22 +142,22 @@
       else if(metodo.value == 2){
          if(codifica.checked ){
             //console.log("ola")
-            mensagemRetornada = window.btoa(fraseDigitada.value)
-            resultado.setAttribute("value",mensagemRetornada)
+            mensagemRetornada = window.btoa(fraseDigitada.value);
+            resultado.setAttribute("value",mensagemRetornada);
          } 
 
       // Decodificando Base 64 
       
       else {
-         mensagemRetornada = window.atob(fraseDigitada.value)
-         resultado.setAttribute("value",mensagemRetornada)
+         mensagemRetornada = window.atob(fraseDigitada.value);
+         resultado.setAttribute("value",mensagemRetornada);
       }
    }
 
 
 // Clicando no botão
 
-   document.getElementById("rodaBotao").addEventListener("onclick", function(event){
+   document.getElementById("rodaBotao").addEventListener("click", function(event){
       event.preventDefault();
    });
 
