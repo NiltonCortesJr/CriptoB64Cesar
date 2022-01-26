@@ -4,7 +4,6 @@
     padding: 0 auto;
     }
 
-
 /* Apliacando o gif como background */
 body{
     width: 95%;
@@ -14,7 +13,6 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
     text-align: center;  
 }
 
@@ -28,7 +26,7 @@ header{
     color: whitesmoke;
 }
 
-/* Estilizando os h1's */
+/* Estilizando os h1 */
 h1{
     background-color: rgba(26, 116, 14, 0.562);
     width: 15em;
@@ -36,15 +34,16 @@ h1{
     border-radius: 0.5em;
     color: whitesmoke;
 }
-/* Estilizando os h1's */
+/* Estilizando os h2 */
 h2{
     font-size: 20px;
     color: whitesmoke;
 }
-/* Estilizando os h1's */
+/* Estilizando os h3 */
 h3{
+    font-size: 20px;
     background-color: rgba(26, 116, 14, 0.562);
-    width: 35em;
+    width: 30em;
     border: 2px solid rgb(145, 241, 132);
     border-radius: 0.5em;
     color: whitesmoke;
@@ -52,7 +51,6 @@ h3{
 
 /* Estilizando as div's */
 .geral{
-
     background-color: rgba(0, 0, 0, 0.726);
 }
 
@@ -109,10 +107,9 @@ label{
 
 /* Estilizando as figuras */ 
 #figura{
-    width: 220px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 60px;
-
 }
 /* Estilizando o id metodoEscolhido */ 
 #metodoEscolhido{
@@ -145,7 +142,6 @@ output{
     font-size: 1em;
     text-shadow:  0.5px 0.5px 0.5px black;
     font-weight: bold;
-    
 }
 /* Estilizando a classe retornoMensagem */ 
 .retornoMensagem{
@@ -166,9 +162,13 @@ footer{
     color: whitesmoke;
 }
 
+p{
+    color: whitesmoke;
+}
+
 /* Implementando o responsivo com tela de 599 a 400px */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     body{
         width: 95%;
     }
@@ -183,7 +183,7 @@ footer{
 
     h2, h3{
         font-size: 15px;
-        width: auto;
+        width: 25em;
     }
 
     #entrada{
@@ -195,8 +195,7 @@ footer{
         flex-direction: column;
         align-content: center;
         align-items: center;
-        align-content: space-between;
-        
+        align-content: space-between;  
     }
     
     #figura{
@@ -204,15 +203,13 @@ footer{
         height: 120px; 
     }
 
-
     footer{
         font-size: 12px;
     }
-
 }
 
 /* Implementando o responsivo com tela abaixo de 399 px */
-@media (max-width: 400px) {
+@media (max-width: 440px) {
 
     h1, h2, h3{
         width: auto;
@@ -221,5 +218,7 @@ footer{
     #entrada, #saida{
         width: 15em;
     }
-    
+ 
 }
+
+/* Final do código CSS */
