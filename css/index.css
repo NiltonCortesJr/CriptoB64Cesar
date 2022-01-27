@@ -34,11 +34,13 @@ h1{
     border-radius: 0.5em;
     color: whitesmoke;
 }
+
 /* Estilizando os h2 */
 h2{
     font-size: 20px;
     color: whitesmoke;
 }
+
 /* Estilizando os h3 */
 h3{
     font-size: 20px;
@@ -51,7 +53,7 @@ h3{
 
 /* Estilizando as div's */
 .geral{
-    background-color: rgba(0, 0, 0, 0.726);
+    background-color: rgba(0, 0, 0, 0.76);
 }
 
 /* Estilizando o campo da frase a ser digitada */
@@ -64,10 +66,14 @@ h3{
     flex-direction: column;
     padding: 1em;
     align-content: center;
+    align-items: center;
 }
 
 /* Estilizando a caixa de mensagem de entrada */  
 #entrada{
+    width: 35em;
+    height: 3em;
+    text-align:left;
     border-radius: 5px;
     border: 3px solid rgb(52, 128, 199);
 }
@@ -116,6 +122,7 @@ label{
     height: 50px;
     border-radius: 10px;
 }
+
 /* Estilizando o id metodoEscolhido */ 
 #metodoEscolhido{
     border-radius: 5px;
@@ -123,11 +130,6 @@ label{
     height: 3em;
     margin-left: 1em;
     border: 3px solid rgb(52, 128, 199);
-}
-
-/* Estilizando a barra progressiva */ 
-output{
-    color: whitesmoke;
 }
 
 /* Estilizando o botão */ 
@@ -148,14 +150,25 @@ output{
     text-shadow:  0.5px 0.5px 0.5px black;
     font-weight: bold;
 }
+
 /* Estilizando a classe retornoMensagem */ 
 .retornoMensagem{
-    margin-top: 25px;
+    margin: 25px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.mensagemFinal{
+    display: flex;
 }
 
 /* Estilizando a caixa de mensagem de saída */ 
 #saida{
+    width: 30em;
+    height: 3em;
+    text-align:left;
     border-radius: 5px;
+    border: 3px solid rgb(52, 128, 199);
+    margin: 0 10px 0 10px;
 }
 
 /* Estilizando o footer */    
@@ -171,8 +184,7 @@ p{
     color: whitesmoke;
 }
 
-/* Implementando o responsivo com tela de 599 a 400px */
-
+/* Implementando o responsivo para tela abaixo de 700px */
 @media (max-width: 700px) {
     body{
         width: 95%;
@@ -191,8 +203,9 @@ p{
         width: 25em;
     }
 
-    #entrada{
+    #entrada, #saida{
         width: 25em;
+        margin: 5px 0 5px 0;
     }
 
     .figuras{
@@ -208,13 +221,18 @@ p{
         height: 120px; 
     }
 
+    .mensagemFinal{
+        display: flex;
+        flex-direction: column;
+    }
+
     footer{
         font-size: 12px;
     }
 }
 
-/* Implementando o responsivo com tela abaixo de 399 px */
-@media (max-width: 440px) {
+/* Implementando o responsivo com tela abaixo de 480 px */
+@media (max-width: 480px) {
 
     h1, h2, h3{
         width: auto;

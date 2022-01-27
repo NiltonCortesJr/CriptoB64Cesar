@@ -5,7 +5,7 @@
 // Declarando variáveis
    var metodoCesar = document.getElementById("avanco");
    var metodo = document.getElementById("metodoEscolhido")
-
+   let valor = parseInt(metodo.value);
 
 // variáveis do botao
    var codifica = document.getElementById("codificaMsg");
@@ -29,32 +29,33 @@
 
 
 // Ocultando o avanço se Base 64
-   function funcaoSelect(valor) {
+
+   metodo.addEventListener("change", function () {
       
-      if(valor == "2"){
+      if(metodo.value == "2"){
          document.getElementById("casoCesar").style.display = "none";
-      } else if(valor == "1"){
+      } else if(metodo.value == "1"){
          document.getElementById("casoCesar").style.display = "flex";
          document.getElementById("casoCesar").style.flexDirection = "column";
       }
-   }
+   })
 
 
 //Validando o checkbox Codificar/Decodificar
 
    if(metodo.value == 1){
-      if(codifica.checked ){
+      if(codifica.checked){
          mensagemRetornada = cifraDeCesar(fraseDigitada.value, metodoCesar.value);
-         resultado.setAttribute("value",mensagemRetornada);
+         resultado.textContent("value",mensagemRetornada);
       }
       else{
          mensagemRetornada = decodicaCesar(fraseDigitada.value, metodoCesar.value);
-         resultado.setAttribute("value",mensagemRetornada);
+         resultado.textContent("value",mensagemRetornada);
       }
    }   
    
 
-   // Cofificando se Cifra de Cesar
+// Cofificando se Cifra de Cesar
 
    function cifraDeCesar (texto, adiciona){
 
@@ -82,13 +83,13 @@
    }
 
 
-   // Decofificando se Cifra de Cesar
+// Decofificando se Cifra de Cesar
 
    function decodicaCesar (texto, adiciona){
 
       var adiciona = parseInt(adiciona);
-      var armazenaMensagem = texto.split("");
-      armazenaMensagem = armazenaMensagem.toLowerCase();
+      var armazenaMensagem = texto.toLowerCase();
+      armazenaMensagem = armazenaMensagem.split("");
       var mensagemCriptografada = [];
       var cesar = [];
 
@@ -114,51 +115,52 @@
       return cesar.join("");
    }
    
-// Validando checkbox para Codificar / Decodificar
-
-   // Se método Cifra de Cesar
-
-   // Codificando
-
-   if(metodo.value == 1){
-      if(codifica.checked ){
-         mensagemRetornada = cifraDeCesar(fraseDigitada.value, metodoCesar.value);
-         resultado.setAttribute("value",mensagemRetornada);
-      }
-      
-      // Decodificando
-
-      else{
-         mensagemRetornada = decodicaCesar(fraseDigitada.value, metodoCesar.value);
-         resultado.setAttribute("value",mensagemRetornada);
-      }
-   }
-
-
-   // Se método Base 64
-
-      // Codificando Base 64
-
-      else if(metodo.value == 2){
-         if(codifica.checked ){
-            //console.log("ola")
-            mensagemRetornada = window.btoa(fraseDigitada.value);
-            resultado.setAttribute("value",mensagemRetornada);
-         } 
-
-      // Decodificando Base 64 
-      
-      else {
-         mensagemRetornada = window.atob(fraseDigitada.value);
-         resultado.setAttribute("value",mensagemRetornada);
-      }
-   }
-
-
+   
+   
 // Clicando no botão
-
+   
    document.getElementById("rodaBotao").addEventListener("click", function(event){
       event.preventDefault();
+   
+      
+// Validando checkbox para Codificar / Decodificar
+      
+      // Se método Cifra de Cesar
+      
+         // Codificando
+      
+         if(metodo.value == 1){
+            if(codifica.checked ){
+               mensagemRetornada = cifraDeCesar(fraseDigitada.value, metodoCesar.value);
+               resultado.setAttribute("value",mensagemRetornada);
+            }
+            
+            // Decodificando
+      
+            else{
+               mensagemRetornada = decodicaCesar(fraseDigitada.value, metodoCesar.value);
+               resultado.setAttribute("value",mensagemRetornada);
+            }
+         }
+      
+      
+      // Se método Base 64
+      
+            // Codificando Base 64
+      
+            else if(metodo.value == 2){
+               if(codifica.checked ){
+                  mensagemRetornada = window.btoa(fraseDigitada.value);
+                  resultado.setAttribute("value",mensagemRetornada);
+               } 
+      
+            // Decodificando Base 64 
+            
+               else if (decodifica.checked){
+                  mensagemRetornada = window.atob(fraseDigitada.value);
+                  resultado.setAttribute("value",mensagemRetornada);
+               }
+            }
    });
 
 // Fim do Código JavaScript

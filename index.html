@@ -6,33 +6,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Passinho do Romano</title>
 
+        <!-- Lincando com o arquivo que traz estilização so site -->
         <link rel="stylesheet" type="text/css" href="./css/index.css">
 
     </head>
     
-    
     <body>
-
         <div class="geral">
-            
+            <!-- Cabeçalho -->
             <header>
-                
+                <!-- Texto apresentando o projeto -->
                 <h1>🔐 Criptografia 🔐</h1> <br>
                 <h2>" É a conversão de texto simples legível em texto incompreensível ("embaralhado"),<br> 
-                    também é usada para proteger senhas 📲, mensagens 📧 ou dados 💻, para que não sejam identificados se interceptados forem." </h2>
-                
+                    também é usada para proteger senhas 📲, mensagens 📧 ou dados 💻, para que não sejam identificados 
+                    se interceptados forem." </h2>
             </header>
-            
-            <main>
-                
-                <div class="escolha">
 
+            <main>
+                <div class="escolha">
+                    
+                    <!-- Inserindo a frase a ser Codificada ou Decodificada-->
                     <div class="frase" title="Digite sua frase">
                         <h3>Insira uma frase para ser codificada ou descodificada: </h3> <br>
-                        <textarea name="frase digitada" id="entrada" cols="60" rows="3" placeholder="Insira sua frase aqui:"  ></textarea>
-                        
+                        <input type="text" name="fraseDigitada" id="entrada" placeholder="Insira sua frase aqui:" >
                     </div>
 
+                    <!-- Escolha de Codificação ou decodificação e adicionando o que foi escolhido no botão -->
                     <div class="codDecod">
                         <h3>Escolha a ação: Codificar ou Decodificar</h3>
                         <br> <input id="codificaMsg" type="radio" name="selecao" title="Selecione aqui!">
@@ -41,55 +40,54 @@
                         <br> <input id="decodificaMsg" type="radio" name="selecao" title="Selecione aqui!">
                         <label for="decodifica" title="Selecione ao lado"> 👈 - D e c o d i f i c a r 🔎 </label>
                     </div>
-                    
+
+                    <!-- Escolha do método Cesar ou Base 64 -->
                     <div class="metodo">
                         <h3>Qual método você quer: Cifra de Cesar ou Base 64?</h3> <br> 
                         
                         <div class="figuras">
                             <img id="figura" src="./img/cifraDeCesar.jpg" alt="imagem do anel de Cesar"> 
-                            
                             <div>
-                                <select onchange="funcaoSelect(this.value)" id="metodoEscolhido" title="Clique na seta!">
+                                <select id="metodoEscolhido" title="Clique na seta!">
                                     <option disabled selected >Selecione o método aqui:</option> 
-                                    <option value="1" >Cifra de Cesar </option>
-                                    <option value="2">Base 64 </option>
+                                    <option value = "1" >Cifra de Cesar </option>
+                                    <option value = "2" >Base 64 </option>
                                 </select>
                             </div>
-
                             <img id="figura" src="./img/base64.png" alt="imagem super base 64">
                         </div>
 
+                        <!-- escolhendo o avanço de casas na cifra de Cesar -->
                         <div id="casoCesar">
                             <br> <label for="selecaoDeCasas">Qual avanço você quer? </label> <br>
-                            <input type="number" id="avanco" min="1" max="25" placeholder="0">
-                            
-                                
+                            <br><input type="number" id="avanco" min="1" max="25" placeholder="0">      
                         </div>
 
+                        <!-- Botão de execução -->
                         <div id="botao">
                             <br> <button id="rodaBotao" type="submit" title="Clique!!"></button>
-                            
                         </div>    
 
+                        <!-- Retorno da Codificação ou Decodificação -->
                         <div class="retornoMensagem">
                             <br> <h3>🔓 Mensagem Codificada / Decodificada: 🔓</h3> <br>
-                            <img id="figura2" src="./img/cadeado1.jpg" alt="Imagem de cadeado2">
-                            <textarea name="fraseCodificada" id="saida" cols="60" rows="3" placeholder="A mensagem codificada / descodificada aparecerá aqui" title="Não digite aqui!"></textarea>
-                            <img id="figura2" src="./img/cadeado3.jpg" alt="Imagem do cadeado3">
+                            <div class="mensagemFinal">
+                                <img id="figura2" src="./img/cadeado1.jpg" alt="Imagem de cadeado2">
+                                <input value = "" id = "saida" placeholder="A mensagem codificada / descodificada aparecerá aqui" title="Não digite aqui!">
+                                <img id="figura2" src="./img/cadeado3.jpg" alt="Imagem do cadeado3">
+                            </div>
                         </div>
-
                     </div>
-
                 </div>
-
             </main>
-
         </div>
 
+        <!-- Rodapé -->
         <footer>
             &copy; Copyright 2022 - NiltonJr. Para fins educacionais. Estudante Desenvolvedor Web Full Stack.
         </footer>
 
+        <!-- Lincando o arquivo que traz dinamicidade para o site -->
         <script src="./js/index.js"></script>
     
     </body>
