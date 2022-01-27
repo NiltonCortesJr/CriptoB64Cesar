@@ -20,11 +20,11 @@
 
 // Mudar a mensagem do botao
    codifica.addEventListener("click", function () {
-      botao.textContent = "C o d i f i c a r"
+      botao.textContent = "Codificar Mensagem!"
    });
 
    decodifica.addEventListener("click", function () {
-      botao.textContent = "D e c o d i f i c a r"
+      botao.textContent = "Decodificar Mensagem!";
    });
 
 
@@ -37,8 +37,8 @@
       } else if(metodo.value == "1"){
          document.getElementById("casoCesar").style.display = "flex";
          document.getElementById("casoCesar").style.flexDirection = "column";
-      }
-   })
+      } 
+   });
 
 
 //Validando o checkbox Codificar/Decodificar
@@ -54,7 +54,7 @@
       }
    }   
    
-
+   
 // Cofificando se Cifra de Cesar
 
    function cifraDeCesar (texto, adiciona){

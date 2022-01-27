@@ -28,8 +28,9 @@ header{
 
 /* Estilizando os h1 */
 h1{
+    font-size: 5em;
     background-color: rgba(26, 116, 14, 0.562);
-    width: 15em;
+    width: 10em;
     border: 2px solid rgb(145, 241, 132);
     border-radius: 0.5em;
     color: whitesmoke;
@@ -37,15 +38,15 @@ h1{
 
 /* Estilizando os h2 */
 h2{
-    font-size: 20px;
+    font-size: 2em;
     color: whitesmoke;
 }
 
 /* Estilizando os h3 */
 h3{
-    font-size: 20px;
+    font-size: 2em;
     background-color: rgba(26, 116, 14, 0.562);
-    width: 30em;
+    width: 20em;
     border: 2px solid rgb(145, 241, 132);
     border-radius: 0.5em;
     color: whitesmoke;
@@ -53,7 +54,7 @@ h3{
 
 /* Estilizando as div's */
 .geral{
-    background-color: rgba(0, 0, 0, 0.76);
+    background-color: rgba(0, 0, 0, 0.61);
 }
 
 /* Estilizando o campo da frase a ser digitada */
@@ -71,6 +72,7 @@ h3{
 
 /* Estilizando a caixa de mensagem de entrada */  
 #entrada{
+    font-size: 1.2em;
     width: 35em;
     height: 3em;
     text-align:left;
@@ -84,12 +86,25 @@ h3{
     border: 3px solid rgb(40, 156, 127);
     border-radius: 0.5em;
 }
+#codificaMsg, #decodificaMsg{
+    margin-right: 12px;
+    width: 3em;
+    height: 3em;
+}
 
 /* Estilizando a cor do label dos radios buttoms */ 
 label{
     font: bold;
-    font-size: 1.2em;
+    font-size: 2.2em;
     color: whitesmoke;
+}
+
+#avanco{
+    text-align: center;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    width: 4em;
+    height: 3em;
 }
 
 /* Estilizando a div método */ 
@@ -113,32 +128,39 @@ label{
 
 /* Estilizando as figuras */ 
 #figura{
-    width: 180px;
-    height: 180px;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
     border-radius: 60px;
 }
 #figura2{
-    width: 50px;
-    height: 50px;
+    background-size: cover;
+    width: 105px;
+    height: 100px;
+    border: 2px solid rgba(145, 241, 132, 0.411);
     border-radius: 10px;
+    margin: 20px 20px 20px 20px;
 }
 
 /* Estilizando o id metodoEscolhido */ 
 #metodoEscolhido{
+    font-size: 1.2em;
     border-radius: 5px;
-    width: 15em;
-    height: 3em;
+    width: 20em;
+    height: 5em;
     margin-left: 1em;
     border: 3px solid rgb(52, 128, 199);
 }
 
 /* Estilizando o botão */ 
 #rodaBotao{
+    font-size: 1.2em;
+    font: bold;
     background-color: rgba(128, 128, 128, 0.849);
     border: 3px solid rgb(52, 128, 199);
     border-radius: 5px;
-    width: 15em;
-    height: 3em;
+    width: 22em;
+    height: 7.3em;
     color: whitesmoke;
 }
 
@@ -146,9 +168,9 @@ label{
 #rodaBotao:hover{
     transition: 0.5s;
     color: rgb(184, 235, 177);
-    font-size: 1em;
+    font-size: 1.9em;
     text-shadow:  0.5px 0.5px 0.5px black;
-    font-weight: bold;
+    
 }
 
 /* Estilizando a classe retornoMensagem */ 
@@ -163,21 +185,23 @@ label{
 
 /* Estilizando a caixa de mensagem de saída */ 
 #saida{
-    width: 30em;
-    height: 3em;
+    width: 35em;
+    height: 7em;
     text-align:left;
-    border-radius: 5px;
+    border-radius: 6px;
     border: 3px solid rgb(52, 128, 199);
-    margin: 0 10px 0 10px;
+    margin: 20px 20px 20px 20px;
 }
 
 /* Estilizando o footer */    
 footer{
+    font-size: 1.2em;
     margin-top: 1em;
     border: 3px solid rgb(40, 156, 127);
     border-radius: 0.5em;
     text-align: center;
     color: whitesmoke;
+    padding: 1em;
 }
 
 p{
@@ -185,7 +209,7 @@ p{
 }
 
 /* Implementando o responsivo para tela abaixo de 700px */
-@media (max-width: 700px) {
+@media (max-width: 880px) {
     body{
         width: 95%;
     }
@@ -195,25 +219,49 @@ p{
     }
 
     h1{
-        font-size: 20px;
+        font-size: 3em;
     }
 
     h2, h3{
-        font-size: 15px;
+        font-size: 1.2em;
         width: 25em;
     }
 
     #entrada, #saida{
-        width: 25em;
+        width: 20em;
         margin: 5px 0 5px 0;
+        border-radius: 9px;
+    }
+
+    label{
+        font-size: 1.5em;
+    }
+
+    #codificaMsg, #decodificaMsg{
+        width: 2em;
+        height: 2em;
+    }
+    
+    #metodoEscolhido{
+        font-size: 1em;
+        border-radius: 5px;
+        width: 15em;
+        height: 3em;
+        margin-left: 1em;
+        border: 3px solid rgb(52, 128, 199);
+    }
+
+    #avanco{
+        font-size: 1em;
+        width: 3em;
+        height: 2.2em;
     }
 
     .figuras{
         display: flex;
-        flex-direction: column;
         align-content: center;
         align-items: center;
-        align-content: space-between;  
+        align-content: space-between;
     }
     
     #figura{
@@ -221,27 +269,69 @@ p{
         height: 120px; 
     }
 
+    #figura2{
+        width: 75px;
+        height: 75px; 
+    }
+
+    #rodaBotao{
+        font-size: 1em;
+        width: 15em;
+        height: 5em;
+    }
+
+    #rodaBotao:hover{
+        color: rgb(184, 235, 177);
+        font-size: 1.3em;
+        text-shadow:  0.5px 0.5px 0.5px black;
+        
+    }
+
     .mensagemFinal{
-        display: flex;
-        flex-direction: column;
+        align-items: center;
+    }
+
+    #saida{
+        width: 30em;
+        height: 5em;
     }
 
     footer{
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 
 /* Implementando o responsivo com tela abaixo de 480 px */
-@media (max-width: 480px) {
+@media (max-width: 700px) {
 
     h1, h2, h3{
+
         width: auto;
     }
 
     #entrada, #saida{
         width: 15em;
     }
- 
+
+    label{
+        font-size: 1.2em;
+    }
+
+    .figuras{
+        display: flex;
+        flex-direction: column;  
+    }
+    
+    #saida{
+        width: 19em;
+        height:5em;
+    }
+
+    .mensagemFinal{
+        width: auto;
+        display: flex;
+        flex-direction: column; 
+    }
 }
 
 /* Final do código CSS */

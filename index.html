@@ -17,9 +17,8 @@
             <header>
                 <!-- Texto apresentando o projeto -->
                 <h1>🔐 Criptografia 🔐</h1> <br>
-                <h2>" É a conversão de texto simples legível em texto incompreensível ("embaralhado"),<br> 
-                    também é usada para proteger senhas 📲, mensagens 📧 ou dados 💻, para que não sejam identificados 
-                    se interceptados forem." </h2>
+                <h2>É a conversão de mensagem / texto simples legível em indecifrável ("embaralhado"). 
+                    <br> Usada em senhas 📲 , mensagens 📧 , dados 💻  e voz 📱 . Feito para que não sejam "compreentidas" caso interceptadas durante o transporte ao receptor. Quando chega ao destinatário, essa mensagem / texto é decriptografada, tornando-se inteligível.</h2>
             </header>
 
             <main>
@@ -27,7 +26,7 @@
                     
                     <!-- Inserindo a frase a ser Codificada ou Decodificada-->
                     <div class="frase" title="Digite sua frase">
-                        <h3>Insira uma frase para ser codificada ou descodificada: </h3> <br>
+                        <h3>Insira uma frase para ser codificada ou decodificada: </h3> <br>
                         <input type="text" name="fraseDigitada" id="entrada" placeholder="Insira sua frase aqui:" >
                     </div>
 
@@ -38,7 +37,7 @@
                         <label for="codifica" title="Selecione ao lado"> 👈 - C o d i f i c a r 🔏</label> <br>
 
                         <br> <input id="decodificaMsg" type="radio" name="selecao" title="Selecione aqui!">
-                        <label for="decodifica" title="Selecione ao lado"> 👈 - D e c o d i f i c a r 🔎 </label>
+                        <label for="decodifica" title="Selecione ao lado"> 👈 - D e c o d i f i c ar 🔎 </label>
                     </div>
 
                     <!-- Escolha do método Cesar ou Base 64 -->
@@ -73,7 +72,7 @@
                             <br> <h3>🔓 Mensagem Codificada / Decodificada: 🔓</h3> <br>
                             <div class="mensagemFinal">
                                 <img id="figura2" src="./img/cadeado1.jpg" alt="Imagem de cadeado2">
-                                <input value = "" id = "saida" placeholder="A mensagem codificada / descodificada aparecerá aqui" title="Não digite aqui!">
+                                <input value = "" id = "saida" placeholder="Resultado da Mensagem.">
                                 <img id="figura2" src="./img/cadeado3.jpg" alt="Imagem do cadeado3">
                             </div>
                         </div>
@@ -84,7 +83,8 @@
 
         <!-- Rodapé -->
         <footer>
-            &copy; Copyright 2022 - NiltonJr. Para fins educacionais. Estudante Desenvolvedor Web Full Stack.
+            &copy; Copyright 2022 - NiltonJr. Para fins educacionais.<br>
+            Estudante Desenvolvedor Web Full Stack.
         </footer>
 
         <!-- Lincando o arquivo que traz dinamicidade para o site -->
